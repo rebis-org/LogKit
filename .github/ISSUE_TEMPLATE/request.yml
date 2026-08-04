@@ -1,0 +1,53 @@
+name: Request
+description: Propose a feature, enhancement, or task.
+labels: ["kind/task", "status/todo"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Request type
+      description: Determines the applied label. Maintainers may re-label during triage.
+      options:
+        - "kind/feature"
+        - "kind/enhancement"
+        - "kind/task"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is missing, incorrect, or unsatisfactory?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Desired outcome. Code sketches are welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Workarounds attempted or designs rejected.
+  - type: checkboxes
+    id: breaking
+    attributes:
+      label: Compatibility
+      options:
+        - label: This change is additive.
+        - label: This change breaks existing API.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have searched existing issues and found no duplicate.
+          required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Related issues, prior art, or supporting links.

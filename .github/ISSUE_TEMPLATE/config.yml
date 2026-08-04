@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions
+    url: https://github.com/rebis-org/Discussions/discussions
+    about: How-to questions and open-ended discussion.
+  - name: Security
+    url: https://github.com/rebis-org/LogKit/security/advisories/new
+    about: Report security vulnerabilities privately.
